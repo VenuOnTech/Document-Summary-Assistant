@@ -7,7 +7,9 @@ def generate_summary(text, length_preference, api_key):
     
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        
+        # Using the exact model name authorized for your API key
+        model = genai.GenerativeModel('gemini-3.6-flash')
         
         # Map the UI selection to specific LLM instructions
         length_instructions = {
